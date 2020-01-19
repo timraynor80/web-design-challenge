@@ -5,12 +5,29 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Landing Page</title>
+
+    <style>
+   
+        @media (max-width:800px) {
+            .vcard-large {
+                display: none;
+            }
+        }
+
+        @media(min-width:799px) {
+            .vcard-small {
+                display: none;
+            }
+        }
+        
+    </style>
 
 </head>
 
@@ -23,29 +40,155 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!--Overall container-->
-    <div class=container-fluid>
+    <div class="container-fluid px-0">
         
         <!--Navbar Row-->
-        <div class=row>
-
+        <div class="d-flex; flex-row; row-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+                <a class="navbar-brand" href="/">
+                    Latitude
+                </a>
+                <ul class="navbar-nav">
+                    <div class="row">
+                        <div class="col">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Plots
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="maxtemp.html">
+                                        vs. MaxTemperature
+                                    </a>
+                                    <a class="dropdown-item" href="humidity.html">
+                                        vs. Humidity
+                                    </a>
+                                    <a class="dropdown-item" href="comparisons.html">
+                                        vs. Cloudiness
+                                    </a>
+                                    <a class="dropdown-item" href="windspeed.html">
+                                        vs. Windspeed
+                                    </a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="comparisons.html">
+                                    Comparisons
+                                </a>
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="data.html">
+                                    Data
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </ul> 
+            </nav>
         </div>
 
         <!--Visualizations Row that will be split into two columns-->
         <div class=row>
 
+            <!--Column for Title/Description Card-->
             <div class="col-md-8 col-sm-12">
-
+                <div class = "card">
+                    <div class ="card-header">
+                        Summary: Latitude vs X
+                    </div>
+                    <div class="card-body">
+                        <img src="Resources/LATvsMAXTEMP.png" style="float:left; width:15em; height:15em">
+                        <p>
+                            The purpose of this project was to analyze how weather changes as you get closer to the equater. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                        </p>
+                        <p>
+                            After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-md-4 col-sm-12">
+            <!--Column for Visualizations Card-->
+            <div class = "col-md-4">
+
+                <div class="vcard-large">
+                    <div class = "card">
+                        <div class ="card-header">
+                            Visualizations
+                        </div>
+                        <div class="card-body">
+                            <div class = "row">
+                                <div class = "column">
+                                    <a href="maxtemp.html">
+                                        <img alt="Latitude vs Max Temperature" layout="flex-item" src="Resources/LATvsMAXTEMP.png" style="float:left; width:15em; height:15em">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="humidity.html">
+                                        <img alt="Latitude vs Humidity" layout="flex-item" src="Resources/LATvsHUMIDITY.png" style="float:left; width:15em; height:15em">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class = "column">
+                                    <a href="cloudiness.html">
+                                        <img alt="Latitude vs Cloudiness" layout="flex-item" src="Resources/LATvsCLOUDINESS.png" style="float:left; width:15em; height:15em">
+                                    </a>
+                                </div>
+                                <div class = "column">
+                                    <a href="windspeed.html">
+                                        <img alt="Latitude vs Wind Speed" layout="flex-item" src="Resources/LATvsWINDSPEED.png" style="float:left; width:15em; height:15em">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vcard-small">
+                    <div class = "card">
+                        <div class ="card-header">
+                            Visualizations
+                        </div>
+                        <div class="card-body">
+                            <div class = "row">
+                                <div class = "column">
+                                    <a href="maxtemp.html">
+                                        <img alt="Latitude vs Max Temperature" layout="flex-item" src="Resources/LATvsMAXTEMP.png" style="float:left; width:10em; height:10em">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a href="humidity.html">
+                                        <img alt="Latitude vs Humidity" layout="flex-item" src="Resources/LATvsHUMIDITY.png" style="float:left; width:10em; height:10em">
+                                    </a>
+                                </div>
+                                <div class = "column">
+                                    <a href="cloudiness.html">
+                                        <img alt="Latitude vs Cloudiness" layout="flex-item" src="Resources/LATvsCLOUDINESS.png" style="float:left; width:10em; height:10em">
+                                    </a>
+                                </div>
+                                <div class = "column">
+                                    <a href="windspeed.html">
+                                        <img alt="Latitude vs Wind Speed" layout="flex-item" src="Resources/LATvsWINDSPEED.png" style="float:left; width:10em; height:10em">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
         </div>
 
         <!--Visible Footer-->
-        <div class="row">
-
+        <div class="row-fluid">
+            <footer class="site-footer bg-secondary text-light d-flex justify-content-center" style="border-top: 5px solid blue">
+                <p class="mt-3">Copyright Tim Raynor 2020</p>
+            </footer>
         </div>
     
     </div>
