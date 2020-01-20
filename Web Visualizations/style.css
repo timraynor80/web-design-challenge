@@ -1,0 +1,84 @@
+body {
+    background-color: #EDEDED;
+}
+
+#description {
+    margin-left: 85px;
+    margin-top: 75px;
+    margin-right: 65px;
+    margin-bottom: 75px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    padding-left: 30px;
+    padding-right: 30px;            
+}
+
+#cardheader {
+    background-color: #FFFFFF;
+    color: #4AABA4;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#visualizations {
+    margin-left: 0px;
+    margin-top: 75px;
+    margin-right: 85px;
+    margin-bottom: 75px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #4AABA4;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#lat-nav {
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    padding-right: 2em; 
+}
+
+#landing-img {
+    float:left; 
+    width:300px; 
+    height:300px;
+}
+
+p {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#lat-brand {
+    background-color: #4AABA4;
+    color: #FFFFFF;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0.35em;
+    border: 0px;
+    margin: 0px;
+    margin-left: 4em;
+    transition: ease all .5s;
+}
+
+@media (max-width:800px) {
+    .vcard-large {
+        display: none;
+    }
+
+    #lat-brand {
+        margin-left: 1.5em;
+    }
+}
+
+@media(min-width:799px) {
+    .vcard-small {
+        display: none;
+    }
+}
